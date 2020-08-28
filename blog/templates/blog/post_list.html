@@ -1,17 +1,50 @@
+{% load static %}
 <html>
     <head>
-        <title>Jon</title>
+        <title>The BCB</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
     </head>
     <body>
-        <div>
-            <h1><a href="/">Jon's Blog</a></h1>
+        <div class="page-header">
+            <h1><a href="/"> The Bridging Coursework Blog </a></h1>
         </div>
-        {% for post in posts %}
-            <div>
-                <p>published: {{ post.published_date }}</p>
-                <h2><a href="">{{ post.title }}</a></h2>
-                <p>{{ post.text|linebreaksbr }}</p>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% for post in posts %}
+                        <div class="post">
+                            <div class="date">
+                                <p>published: {{ post.published_date }}</p>
+                            </div>
+                            <h2><a href="">{{ post.title }}</a></h2>
+                            <p>{{ post.text|linebreaksbr }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
-        {% endfor %}
+        </div>
     </body>
+    <footer class="footer">
+        <p> Temp List of things used: </p>
+        <p>
+            Liberations Sans font ( Uses SIL Open Font Licence which can be found at: 
+            <a href="https://www.fontsquirrel.com/license/liberation-sans"> https://www.fontsquirrel.com/license/liberation-sans </a>
+            )
+        </p>
+        <p>
+            Django
+        </p>
+        <p>
+            Python
+        </p>
+        <p>
+            Code hosted on Github
+        </p>
+        <p>
+            Website hosted on Pythonanywhere
+        </p>
+    </footer> 
 </html>

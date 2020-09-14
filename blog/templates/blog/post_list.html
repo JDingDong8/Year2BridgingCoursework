@@ -1,50 +1,13 @@
-{% load static %}
-<html>
-    <head>
-        <title>The BCB</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-        <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
-    </head>
-    <body>
-        <div class="page-header">
-            <h1><a href="/"> The Bridging Coursework Blog </a></h1>
-        </div>
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-                    {% for post in posts %}
-                        <div class="post">
-                            <div class="date">
-                                <p>published: {{ post.published_date }}</p>
-                            </div>
-                            <h2><a href="">{{ post.title }}</a></h2>
-                            <p>{{ post.text|linebreaksbr }}</p>
-                        </div>
-                    {% endfor %}
-                </div>
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <div class="date">
+                {{ post.published_date }}
             </div>
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
-    </body>
-    <footer class="footer">
-        <p> Temp List of things used: </p>
-        <p>
-            Liberations Sans font ( Uses SIL Open Font Licence which can be found at: 
-            <a href="https://www.fontsquirrel.com/license/liberation-sans"> https://www.fontsquirrel.com/license/liberation-sans </a>
-            )
-        </p>
-        <p>
-            Django
-        </p>
-        <p>
-            Python
-        </p>
-        <p>
-            Code hosted on Github
-        </p>
-        <p>
-            Website hosted on Pythonanywhere
-        </p>
-    </footer> 
-</html>
+    {% endfor %}
+{% endblock %}

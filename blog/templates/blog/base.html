@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+    <head>
+        <title>The BCB</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div class="page-container">
+            <div class="page-header">
+                <div class="title">
+                    <h1><a class="link" href="/"> The Bridging Coursework Blog </a></h1>
+                </div>
+                <div class="theme-switcher">
+                    <button id="btn-theme-switcher" onclick="toggleTheme()"></button>
+                </div>      
+            </div>  
+            <div class="content container">
+                <div class="row">
+                    <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="footer-item">                   
+                    <a class=link href="https://www.fontsquirrel.com/license/liberation-sans">Using Liberations Sans font</a>
+                </div>
+                <div class="footer-item">
+                    <a class=link href="https://www.djangoproject.com/">Built with Django</a>
+                </div>
+                <div class="footer-item">
+                    <a class=link href="https://github.com/JDingDong8/Year2BridgingCoursework">Github Repo</a>
+                </div>
+                <div class="footer-item">
+                    <a class=link href="https://www.pythonanywhere.com">Hosted on PythonAnywhere</a>
+                </div>
+                <div class="footer-item">
+                    <a class=link href="https://fontawesome.com/">Using icons from FontAwesome</a>
+                </div>
+                <span class="distribute"></span>
+            </footer>
+        </div>
+        <script>
+             function toggleTheme() {
+                document.body.classList.toggle("body-dark");
+                document.getElementById("btn-theme-switcher").classList.toggle("btn-theme-switcher-dark");
+                var links = document.getElementsByClassName("link");
+                for(var i=0; i < links.length; i++) {
+                    links[i].classList.toggle("link-dark");
+                }
+                var posts = document.getElementsByClassName("post")
+                for(var i=0; i < posts.length; i++) {
+                    posts[i].classList.toggle("post-dark");
+                }
+            }
+        </script>
+    </body> 
+</html>

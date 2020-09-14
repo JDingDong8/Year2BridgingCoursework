@@ -41,7 +41,7 @@ body{
 #btn-theme-switcher::before {
     font-family: fontAwesome;
     content: "\f186";
-    font-size: 36pt;
+    font-size: 48pt;
 }
 
 .btn-theme-switcher-dark::before {
@@ -52,7 +52,7 @@ body{
 
 .post {
     margin-bottom: 20px;
-    margin-left: 10px;
+    margin-left: -360px;
     height:100px;
     min-width:40px;
 }
@@ -67,12 +67,35 @@ body{
 
 /*Everything below shouldn't need to change with dark-theme*/
 .page-header {
+    background-color: #276F02;
     margin-top: 0;
     padding: 5px 20px 20px 20px;
 }
 
-.page-header {
-    background-color: #276F02;
+ 
+.glyphicon {
+    width:36px;
+    height:36px;
+    font-size:36pt;
+    color:white;
+    padding-right:50px;
+}
+
+.glyphicon-pencil{
+    position:fixed;
+    top:150px;
+    right:20px;
+    width:48pt;
+    height:48pt;
+    font-size:48pt;
+    text-align:center;
+    vertical-align:middle;
+    border:none !important;
+    background:none;
+    color:black;
+}
+.btn-default:hover {
+    background:none;
 }
 
 .title {

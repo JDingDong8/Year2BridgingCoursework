@@ -23,7 +23,7 @@ body{
 .theme-switcher {
     display: inline-block;
     *display: inline;
-    position:absolute;
+    position: absolute;
     right: 0.5vw;
     padding-top: 0vw;
 }
@@ -74,7 +74,7 @@ body{
 }
 
 .footer-item-dark {
-    color: #eeeeee;
+    color: #eeeeee !important;
 }
 
 #edit-pencil{

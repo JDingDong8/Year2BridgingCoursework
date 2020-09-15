@@ -17,44 +17,41 @@ body{
 }
 
 .link-dark{
-    color:#eeeeee !important;
+    color:#eeeeee;
 }
 
 .theme-switcher {
     display: inline-block;
     *display: inline;
     position:absolute;
-    right: 10px;
-    padding-top: 7px;
+    right: 0.5vw;
+    padding-top: 0vw;
 }
 
-#btn-theme-switcher, .btn-theme-switcher-dark {
-    width: 80px;
-    height: 80px;
+#btn-theme-switcher{
+    width: 4vw;
+    height: 4vw;
     border: none;
-}
-
-#btn-theme-switcher {
-    background-color:#808080;
+    background:none;
 }
 
 #btn-theme-switcher::before {
     font-family: fontAwesome;
     content: "\f186";
-    font-size: 48pt;
+    font-size: 3.5vw;
 }
 
 .btn-theme-switcher-dark::before {
     font-family: fontAwesome;
     content: "\f185" !important;
-    font-size: 36pt;
+    font-size: 3.5vw;
 }
 
 .post {
-    margin-bottom: 20px;
-    margin-left: -360px;
-    height:100px;
-    min-width:40px;
+    margin-bottom: 1.5vw;
+    margin-left: -19vw;
+    height:5vw;
+    min-width:2vw;
 }
 
 .post h2 a, .post h2 a:visited {
@@ -62,38 +59,54 @@ body{
 }
 
 .post-dark h2 a, .post-dark h2 a:visited {
-    color: #eeeeee !important;
+    color: #eeeeee;
+}
+
+.footer-item, .footer-item-dark {    
+    font-size: 0.7vw;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+.footer-item{
+    color: #222222;
+}
+
+.footer-item-dark {
+    color: #eeeeee;
+}
+
+#edit-pencil{
+    position:fixed;
+    top:7vw;
+    right:0.5vw;
+    width:3.5vw;
+    height:3.5vw;
+    font-size:2.5vw;
+    background:none;
+    color:black;
+}
+
+.edit-pencil-dark {
+    color:white !important;
 }
 
 /*Everything below shouldn't need to change with dark-theme*/
 .page-header {
     background-color: #276F02;
-    margin-top: 0;
-    padding: 5px 20px 20px 20px;
+    margin-top: 0vw;
+    padding : 0vw 0vw 1vw 0vw;
 }
 
- 
-.glyphicon {
-    width:36px;
-    height:36px;
-    font-size:36pt;
+#new-plus {
     color:white;
-    padding-right:50px;
+    width:2vw;
+    height:3vw;
+    font-size:2.5vw;
+    padding: 0vw 1vw 0vw 0.5vw;
 }
 
-.glyphicon-pencil{
-    position:fixed;
-    top:150px;
-    right:20px;
-    width:48pt;
-    height:48pt;
-    font-size:48pt;
-    text-align:center;
-    vertical-align:middle;
-    border:none !important;
-    background:none;
-    color:black;
-}
 .btn-default:hover {
     background:none;
 }
@@ -105,9 +118,10 @@ body{
 
 .title h1, .title h1 a, .title h1 a:visited, .title h1 a:active {
     color: #ffffff;
-    font-size: 36pt;
+    font-size: 2.5vw;
     font_weight: bold;
     text-decoration: none;
+    padding-left:0.5vw;
 }
 
 .page-container {
@@ -121,7 +135,8 @@ body{
 
 .date {
     color: #828282;
-    margin-bottom:-15px;
+    margin-bottom:-0.75vw;
+    margin-left:0.1vw;
 }
 
 .save {
@@ -141,23 +156,8 @@ body{
   -ms-text-justify: distribute-all-lines;
   text-justify: distribute-all-lines;
   min-width: 100%;
-  padding-left: 10px;
-  padding-right: 20px;
-}
-
-.footer-item, .footer-item-dark {    
-    font-size: 10pt;
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-}
-
-.footer-item{
-    color: #828282;
-}
-
-.footer-item-dark {
-    color: #eeeeee;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
 }
 
 .distribute {

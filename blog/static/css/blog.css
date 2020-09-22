@@ -25,7 +25,7 @@ body{
     *display: inline;
     position: absolute;
     right: 0.5vw;
-    padding-top: 0vw;
+    margin-top: 0vw;
 }
 
 #btn-theme-switcher{
@@ -50,8 +50,6 @@ body{
 .post {
     margin-bottom: 1.5vw;
     margin-left: -19vw;
-    height:5vw;
-    min-width:2vw;
 }
 
 .post h2 a, .post h2 a:visited {
@@ -96,7 +94,7 @@ body{
 .page-header {
     background-color: #276F02;
     margin-top: 0vw;
-    padding : 0vw 0vw 1vw 0vw;
+    margin : 0vw 0vw 1vw 0vw;
 }
 
 #new-plus {
@@ -104,7 +102,7 @@ body{
     width:2vw;
     height:3vw;
     font-size:2.5vw;
-    padding: 0vw 1vw 0vw 0.5vw;
+    margin: 0vw 1vw 0vw 0.5vw;
 }
 
 .btn-default:hover {
@@ -121,7 +119,7 @@ body{
     font-size: 2.5vw;
     font_weight: bold;
     text-decoration: none;
-    padding-left:0.5vw;
+    margin-left:0.5vw;
 }
 
 .page-container {
@@ -130,7 +128,7 @@ body{
 }
 
 .content-container {
-    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
 }
 
 .date {
@@ -156,8 +154,8 @@ body{
   -ms-text-justify: distribute-all-lines;
   text-justify: distribute-all-lines;
   min-width: 100%;
-  padding-left: 0.5vw;
-  padding-right: 0.5vw;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
 }
 
 .distribute {

@@ -6,9 +6,9 @@ class HttpHeaders:
     def __call__(self, request):
         response = self.get_response(request)
         # set noCaching
-        response["Cache-Control"] = "no-cache, no-store, must-revalidate"
-        response["Pragma"] = "no-cache"
-        response["Expires"] = "0"
+        # response["Cache-Control"] = "no-cache, no-store, must-revalidate"
+        # response["Pragma"] = "no-cache"
+        # response["Expires"] = "0"
         # set referrer-policy
         response["Referrer-Policy"] = "strict-origin-when-cross-origin"
         return response

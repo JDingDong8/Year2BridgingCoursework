@@ -10,5 +10,5 @@ class HttpHeaders:
         response["Pragma"] = "no-cache"
         response["Expires"] = "0"
         # set referrer-policy
-        response["Referrer-Policy"] = "no-referrer"
+        response["Referrer-Policy"] = "strict-origin-when-cross-origin"
         return response
